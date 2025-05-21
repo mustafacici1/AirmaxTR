@@ -1,0 +1,774 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #101820;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Mobile-first approach */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: Outfit;
+  padding: 15px 0;
+}
+
+/* intro section */
+.intro {
+  position: relative;
+  background: black;
+  height: 90vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.intro video {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   opacity: 0.5;
+   z-index: 0;
+   transform: translate(-50%, -50%);
+}
+.intro .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.intro .overlay-wcs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  z-index: 1;
+}
+
+.font_intro {
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  font-size: 8vw; /* Responsive font size */
+  color: white;
+}
+
+/* about section */
+.font_about {
+  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+  color: white;
+}
+
+.about {
+  background-color: #101820;
+  width: 100%;
+  height: auto;
+  color: black;
+  padding: 40px 0;
+}
+
+.about_Us {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  color: black;
+  padding: 40px 0;
+}
+
+/* Products section */
+.produk {
+  background-color: white;
+  border-radius: 40px 40px 0px 0px;
+  width: 100%;
+  height: auto;
+  color: black;
+  padding: 20px 0;
+}
+
+/* brand section */
+.brand .container {
+  margin-top: 5rem;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjusted for mobile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("airmaximg/esbjerg_stage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+}
+
+.hero-top {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("airmaximg/logo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  max-width: 100%;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+  font-weight: 300;
+  margin-top: 1rem;
+  color: white;
+  font-size: 1rem;
+}
+
+/* brand about section */
+.brand2 .container {
+  margin-top: 5rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Profit section */
+.profit {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+}
+
+/* Navigation pills */
+.nav-pills {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-pills .pill-1 .nav-link:not(.active),
+.nav-pills .pill-2 .nav-link:not(.active),
+.nav-pills .pill-3 .nav-link:not(.active) {
+  background-color: #101820;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.nav-pills .pill-1 .nav-link,
+.nav-pills .pill-2 .nav-link,
+.nav-pills .pill-3 .nav-link {
+  background-color: #1a9425;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.tab-content {
+  background-color: white;
+  border-radius: 20px;
+  display: inline-block;
+  width: 90%;
+  font-family: "Outfit", sans-serif;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Products listing */
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-products {
+  padding: 40px 0;
+}
+
+.section-products .header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-products .header h3 {
+  font-size: 1rem;
+  color: #fe302f;
+  font-weight: 500;
+  font-family: Outfit;
+}
+
+.section-products .header h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: Outfit;
+}
+
+.section-products .single-product {
+  margin-bottom: 26px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-products .single-product .part-1 {
+  position: relative;
+  height: 250px;
+  max-height: 250px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-products .single-product:hover .part-1::before {
+  transform: scale(1.1);
+}
+
+/* Product image backgrounds */
+.section-products #product-1 .part-1::before {
+  background: url("airmaximg/IMG-20250516-WA0003.jpg") no-repeat center;
+  background-size: 75%;
+  background-color: #ffffff;
+}
+
+.section-products #product-2 .part-1::before {
+  background: url("airmaximg/IMG-20250516-WA0004.jpg") no-repeat center;
+  background-size: 75%;
+  background-color: #ffffff;
+}
+
+.section-products #product-3 .part-1::before {
+  background: url("airmaximg/IMG-20250516-WA0005.jpg") no-repeat center;
+  background-size: 105%;
+  background-color: #ffffff;
+}
+
+.section-products #product-4 .part-1::before {
+  background: url("airmaximg/IMG-20250516-WA0006.jpg") no-repeat center;
+  background-size: 75%;
+  background-color: #ffffff;
+}
+
+.section-products #product-5 .part-1::before {
+  background: url("airmaximg/IMG-20250516-WA0007.jpg") no-repeat center;
+  background-size: 120%;
+  background-color: #ffffff;
+}
+
+.section-products #product-6 .part-1::before {
+  background: url("airmaximg/IMG-20250516-WA0007.jpg") no-repeat center;
+  background-size: 78%;
+  background-color: #ffffff;
+}
+
+.section-products #product-7 .part-1::before {
+  background: url("img/produk/airoh.png") no-repeat center;
+  background-size: 78%;
+  background-color: #ffffff;
+}
+
+.section-products #product-8 .part-1::before {
+  background: url("airmaximg/IMG-20250516-WA0008.jpg") no-repeat center;
+  background-size: 84%;
+  background-color: #ffffff;
+}
+
+/* Product 2 */
+.section-products #product-9 .part-1::before {
+  background: url("img/produk/JPX_MX-726_BLACK.png") no-repeat center;
+  background-size: 120%;
+  background-color: #ffffff;
+}
+
+.section-products #product-10 .part-1::before {
+  background: url("img/produk/JPX_MX-726_YELLOW.png") no-repeat center;
+  background-size: 120%;
+  background-color: #ffffff;
+}
+
+.section-products #product-11 .part-1::before {
+  background: url("img/produk/KYT\ NZ.png") no-repeat center;
+  background-size: 75%;
+  background-color: #ffffff;
+}
+
+.section-products #product-12 .part-1::before {
+  background: url("img/produk/KYT\ NZ\ RACING.png") no-repeat center;
+  background-size: 75%;
+  background-color: #ffffff;
+}
+
+/* Product 3 */
+.section-products #product-13 .part-1::before {
+  background: url("img/produk/RETO_CAKIL_GREEN.png") no-repeat center;
+  background-size: 95%;
+  background-color: #ffffff;
+}
+
+.section-products #product-14 .part-1::before {
+  background: url("img/produk/HelmHonda.png") no-repeat center;
+  background-size: 90%;
+  background-color: #ffffff;
+}
+
+.section-products #product-15 .part-1::before {
+  background: url("img/produk/CKIL_HBC_RUST.png") no-repeat center;
+  background-size: 80%;
+  background-color: #ffffff;
+}
+
+.section-products #product-16 .part-1::before {
+  background: url("img/produk/NJS_NX2_BLACK.png") no-repeat center;
+  background-size: 90%;
+  background-color: #ffffff;
+}
+
+/* Product 4 */
+.section-products #product-17 .part-1::before {
+  background: url("img/produk/JP_6.png") no-repeat center;
+  background-size: 110%;
+  background-color: #ffffff;
+}
+
+.section-products #product-18 .part-1::before {
+  background: url("img/produk/CAKIL_HBC_WHITE.png") no-repeat center;
+  background-size: 75%;
+  background-color: #ffffff;
+}
+
+.section-products #product-19 .part-1::before {
+  background: url("img/produk/SAM_4014.png") no-repeat center;
+  background-size: 80%;
+  background-color: #ffffff;
+}
+
+.section-products #product-20 .part-1::before {
+  background: url("img/produk/hbc_pilot.png") no-repeat center;
+  background-size: 80%;
+  background-color: #ffffff;
+}
+
+/* Product badges */
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #ffffff;
+  background-color: #fe302f;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-radius: 3px;
+}
+
+.section-products .single-product .part-1 .new {
+  left: 0;
+  background-color: #444444;
+}
+
+/* Product action buttons */
+.section-products .single-product .part-1 ul {
+  position: absolute;
+  bottom: -41px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ffffff;
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 2px 20px rgba(50, 50, 50, 0.1);
+  transition: color 0.2s;
+  border-radius: 50%;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+  color: #fe302f;
+}
+
+/* Product details */
+.section-products .single-product .part-2 {
+  padding: 15px;
+}
+
+.section-products .single-product .part-2 .product-title {
+  font-size: 1rem;
+  color: #101820;
+  margin-bottom: 5px;
+}
+
+.section-products .single-product .part-2 h4 {
+  display: inline-block;
+  font-size: 1rem;
+  color: #101820;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+  position: relative;
+  padding: 0 7px;
+  margin-right: 2px;
+  opacity: 0.6;
+  color: #101820;
+  text-decoration: line-through;
+}
+
+/* Card styles */
+.card {
+  margin-bottom: 20px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card .card-subtitle {
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #8898aa;
+}
+
+/* Product list */
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Pagination */
+.pagination {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.pagination li a {
+  display: block;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  color: #101820;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.pagination li.active a {
+  background-color: #101820;
+  color: white;
+}
+
+.pagination li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* Footer */
+.footer-basic {
+  padding: 40px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+/* Scroll to top button */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #fe302f;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* Animation */
+.naik {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.tampil {
+  position: relative;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Carousel section specific styles */
+.carousel-section {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.carousel-section .container {
+  padding: 0 15px;
+}
+
+.carousel-inner {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* CTA section styles */
+.cta-section {
+  background-color: #101820;
+  margin: 20px 0;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .font_intro {
+    font-size: 40px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-products .single-product .part-1 {
+    height: 270px;
+  }
+  
+  .carousel-section {
+    padding-top: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .produk {
+    border-radius: 60px 60px 0px 0px;
+  }
+  
+  .tab-content {
+    width: 80%;
+  }
+  
+  .hero {
+    height: 70vh;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .produk {
+    border-radius: 85px 85px 0px 0px;
+  }
+  
+  .produk .col-lg-7 {
+    padding-top: 100px;
+  }
+  
+  .brand .container, .brand2 .container {
+    margin-top: 10rem;
+    border-radius: 85px;
+  }
+  
+  .tab-content {
+    width: 70%;
+  }
+  
+  .hero {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
